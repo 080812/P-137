@@ -1,0 +1,35 @@
+<html>
+<head>
+
+	<title>AI Object Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body background="Wallpaper.jpg">
+  <center>
+    <h1 class="btn btn-info heading">AI Object Finder <br>
+      <span>The input name which you will give should match the names present in COCOSSD model then only it will detect</span>
+    </h1> <br><br>
+    <div class="heading2">
+      <label>Object Name: </label>
+      <input type="text" placeholder="enter an object name" class="textbox" id="TI">
+    </div><br>
+    <button onclick="start()" class="btn btn-success" id="start">Start</button><br>
+    <h3 class="btn btn-danger classstatus" id="status"> </h3>
+    <h3 class="btn btn-warning number" id="no.object"> </h3>
+    
+  </center>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
