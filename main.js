@@ -10,6 +10,7 @@ function setup(){
 canvas=createCanvas(400,400)
 canvas.center()
 video=createCapture(VIDEO)
+video.size(400,400)
 video.hide()
 }
 
@@ -33,11 +34,16 @@ if(status!=""){
         stroke("black")
         rect(objects[i].x,objects[i].y,objects[i].width,objects[i].height)
     }
+    if(text==objects[i].label){
+        
+    }
 }
 }
 
 function start(){
     objectdetector=ml5.objectDetector('COCOSSD',modelLoaded)
+    document.getElementById("status").innerHTML="status:detecting objects"
+    objectname=document.getElementById("TI").value
 }
 
 
