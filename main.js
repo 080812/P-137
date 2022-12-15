@@ -34,8 +34,18 @@ if(status!=""){
         stroke("black")
         rect(objects[i].x,objects[i].y,objects[i].width,objects[i].height)
     }
-    if(text==objects[i].label){
-        
+    if(objects[i].label==text){
+       video.stop()
+       objectdetector.detect(gotresult)
+       document.getElementById("status").innerHTML="Object mentioned found"
+     synth=window.speechSynthesis;
+     utterthis=new SpeechSynthesisUtterance(text+" found")
+     synth.speak(utterthis);
+
+
+    }
+    else{
+        document.getElementById("status").innerHTML="Object not found"
     }
 }
 }
